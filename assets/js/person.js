@@ -72,3 +72,26 @@ console.log(persons);
 const findPerson = Person.find("Nyonya hawa");
 console.log(findPerson);
 console.log(person1.name);
+
+const siswa =[];
+class Students extends Person{
+    setClass(kelas){
+        this.kelas = kelas 
+        return this
+        
+    }
+    setSchool(sekolah){
+        this.sekolah = sekolah;
+        return this
+
+    }
+}
+
+const student1 = new Students();
+const student2 = new Students();
+student1.setName("jarwo").setGender("L").setClass(2).setSchool("SMP sukodadi");
+student2.setName("Mona").setGender("P").setClass(2).setSchool("SMP sukodadi");
+siswa.push(student1);
+siswa.push(student2);
+
+console.log(siswa);
