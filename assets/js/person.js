@@ -10,7 +10,23 @@ class Person {
         // 1. Tambahkan di constructor untuk set value gender
     }
 
+    setName(name){
+        this.name = name ;
+        return this
+    }
+
+    setGender(gender){
+        const genders = ["L", "P"];
+        if (genders.includes(gender)) {
+            this.gender =gender;
+            
+        } else{
+            console.error("inputan salah");
+        }
+        return this;
+    }
     setTitle() {
+        
         if (this.gender==="L") {
             this.name = "Tuan " + this.name
              
@@ -28,10 +44,17 @@ class Person {
     } 
 }
 
-let adam = new Person("Adam", "L"); 
-adam.setTitle();
-let hawa = new Person("hawa", "P"); 
-hawa.setTitle();
+let person1 = new Person("Adam", "L"); 
+person1.setTitle();
+let person2 = new Person("hawa", "P"); 
+person2.setTitle();
+let person3 = new Person();
+person3.name = "Agung"
+person3.gender = "L"
+person3.setTitle()
+
+let person4 = new Person();
+person4.setName("Faisal").setGender("Laki").setTitle();
 
 // 3. buat kan 2 object person
     // 1 person laki laki
@@ -39,7 +62,7 @@ hawa.setTitle();
     // 1 person perempuan
     // panggil funsi setTittle dari object person 
 
-persons.push(adam,hawa);
+persons.push(person1,person2,person3,person4);
     // 4. setiap object person nya ditambahkan ke array object persons
 
 // 5. tampilkan object persons.
@@ -48,3 +71,4 @@ console.log(persons);
 // 7. panggil fungsi Person.find(name) dan muncul kan object person berdasarkan nama yang di input.
 const findPerson = Person.find("Nyonya hawa");
 console.log(findPerson);
+console.log(person1.name);
