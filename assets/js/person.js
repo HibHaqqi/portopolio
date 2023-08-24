@@ -23,9 +23,10 @@ class Person {
         } else{
             console.error("inputan salah");
         }
+        this.#setTitle();
         return this;
     }
-    setTitle() {
+    #setTitle() {
         
         if (this.gender==="L") {
             this.name = "Tuan " + this.name
@@ -45,16 +46,16 @@ class Person {
 }
 
 let person1 = new Person("Adam", "L"); 
-person1.setTitle();
+
 let person2 = new Person("hawa", "P"); 
-person2.setTitle();
+
 let person3 = new Person();
 person3.name = "Agung"
 person3.gender = "L"
-person3.setTitle()
+
 
 let person4 = new Person();
-person4.setName("Faisal").setGender("Laki").setTitle();
+person4.setName("Faisal").setGender("Laki")
 
 // 3. buat kan 2 object person
     // 1 person laki laki
@@ -94,4 +95,4 @@ student2.setName("Mona").setGender("P").setClass(2).setSchool("SMP sukodadi");
 siswa.push(student1);
 siswa.push(student2);
 
-console.log(siswa);
+console.log(siswa); 
